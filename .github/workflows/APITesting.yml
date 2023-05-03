@@ -22,6 +22,8 @@ jobs:
           echo "Sources downloaded."
           ls -lrt
           cd src
+          echo "Inside src..."
+          ls -lrt
           echo "Building sedge..."
           make compile
           ls -lrt
