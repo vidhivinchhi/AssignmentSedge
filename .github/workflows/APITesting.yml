@@ -23,6 +23,8 @@ jobs:
           make compile
           cd build
           ls -lrt
+          cd sedge
+          ls -lrt
       - name: Run Sedge tool
         run: |
           echo 'Running sedge...'
