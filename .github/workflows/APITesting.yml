@@ -18,7 +18,7 @@ jobs:
       - name: Download and build Sedge
         run: |
           echo "Downloading sedge sources..."
-          ggit clone https://github.com/NethermindEth/sedge.git
+          git clone https://github.com/NethermindEth/sedge.git
           cd sedge
           make compile
           cd build
