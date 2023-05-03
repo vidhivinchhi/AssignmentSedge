@@ -23,3 +23,5 @@ jobs:
           mkdir -p build
           go build -o build/sedge cmd/sedge/main.go
           ls -lrt
+          cd build
+          ls -lrt
