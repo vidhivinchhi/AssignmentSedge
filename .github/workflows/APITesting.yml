@@ -26,4 +26,4 @@ jobs:
           chmod 777 sedge
           ls -lrt
           ./sedge --help
-          ./sedge deps install 
+          ./sedge deps install >> $HOME/sedge.logs
