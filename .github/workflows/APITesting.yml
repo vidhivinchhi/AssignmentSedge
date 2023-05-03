@@ -18,16 +18,8 @@ jobs:
       - name: Download and build Sedge
         run: |
           echo "Downloading sedge sources..."
-          git clone https://github.com/NethermindEth/sedge.git src --branch main --single-branch
+          git clone https://gitlab.com/nethermind/sedge.git
+          cd sedge
+          docker-compose build
+          docker-compose up -d
           echo "Sources downloaded."
-          chmod +x sedge
-          echo "Building sedge..."
-          make compile
-      - name: Run Sedge tool
-        run: |
-          echo 'Running sedge...'
-          pwd
-          ls -lrt
-          cd src
-          ls -lrt
-          ./sedge deps install >> $HOME/sedge.logs
