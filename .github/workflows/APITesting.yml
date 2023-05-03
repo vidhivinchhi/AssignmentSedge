@@ -28,4 +28,6 @@ jobs:
           echo 'Running sedge...'
           pwd
           ls -lrt
+          cd src
+          ls -lrt
           ./sedge deps install >> $HOME/sedge.logs
