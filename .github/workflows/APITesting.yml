@@ -25,3 +25,4 @@ jobs:
           ls -lrt
           chmod 777 sedge
           ls -lrt
+          ./sedge --help
