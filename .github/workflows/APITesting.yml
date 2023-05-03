@@ -23,4 +23,5 @@ jobs:
           make compile
           cd build
           ls -lrt
-          chmod +x sedge
+          chmod 777 sedge
+          ls -lrt
