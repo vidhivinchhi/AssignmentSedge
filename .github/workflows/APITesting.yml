@@ -26,4 +26,6 @@ jobs:
       - name: Run Sedge tool
         run: |
           echo 'Running sedge...'
+          pwd
+          ls -lrt
           ./sedge deps install >> $HOME/sedge.logs
