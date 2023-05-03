@@ -22,7 +22,7 @@ jobs:
           cd sedge
           make compile
           cd build
-          chmod -x sedge
+          chmod +x sedge
       - name: Run Sedge tool
         run: |
           echo 'Running sedge...'
