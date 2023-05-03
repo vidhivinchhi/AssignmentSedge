@@ -27,5 +27,14 @@ jobs:
           ls -lrt
           ./sedge --help
           ./sedge deps install >> $HOME/sedge.logs
-          ./sedge generate --logging none -p $HOME /full-node  --network chiado / -c lighthouse:sigp/lighthouse:latest -e nethermind:nethermindeth/nethermind:master / --el-extra-flag Sync.NonValidatorNode=true --el-extra-flag Sync.DownloadBodiesInFastSync=false / --el-extra-flag SyncDownloadeceiptsInFastSync=false / --cl-extra-flag checkpoint-sync-url=http://139.144.26.89:4000/ >> $HOME/sedge.logs 
-
+      - name: Verify client synchronization
+        run: |
+          echo "Verifying client synchronization..."
+          while true; do
+            sync_status=$(curl -sX POST --data '{"jsonrpc":"2.0","method":"eth_syncing","params":[],"id":1}' -H "Content-Type: application/json" localhost:8545 | jq -r '.result')
+            if [ "$sync_status" = "false" ]; then
+              echo "Client synchronization completed."
+              break
+            fi
+            sleep 10
+          done
