@@ -20,6 +20,7 @@ jobs:
           echo "Downloading sedge sources..."
           git clone https://github.com/NethermindEth/sedge.git src --branch main --single-branch
           echo "Sources downloaded."
+          ls -lrt
           cd src
           echo "Building sedge..."
           make compile
