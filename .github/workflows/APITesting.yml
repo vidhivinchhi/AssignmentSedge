@@ -21,6 +21,8 @@ jobs:
           git clone https://github.com/NethermindEth/sedge.git src --branch main --single-branch
           echo "Sources downloaded."
           cd src
+          pwd
+          ls -lrt
           echo "Building sedge..."
           make compile
       - name: Run Sedge tool
