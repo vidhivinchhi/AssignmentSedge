@@ -22,9 +22,7 @@ jobs:
           cd sedge
           make compile
           cd build
-          ls -lrt
-          cd sedge
-          ls -lrt
+          chomod -x sedge
       - name: Run Sedge tool
         run: |
           echo 'Running sedge...'
