@@ -20,13 +20,9 @@ jobs:
           echo "Downloading sedge sources..."
           git clone https://github.com/NethermindEth/sedge.git src --branch main --single-branch
           echo "Sources downloaded."
-          chmod 777 *
-          cd src
-          pwd
-          ls -lrt
+          chmod +x sedge
           echo "Building sedge..."
           make compile
-          chmod 777 *
       - name: Run Sedge tool
         run: |
           echo 'Running sedge...'
