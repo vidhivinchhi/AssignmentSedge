@@ -18,7 +18,7 @@ jobs:
       - name: Download and build Sedge
         run: |
           echo "Downloading sedge sources..."
-          git clone https://gitlab.com/nethermind/sedge.git
+          git clone https://github.com/NethermindEth/sedge.git
           cd sedge
           docker-compose build
           docker-compose up -d
